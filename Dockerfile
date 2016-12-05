@@ -20,8 +20,9 @@ RUN \
   cd /opt/tomcat && \
   wget http://apache.claz.org/tomcat/tomcat-7/v7.0.73/bin/apache-tomcat-7.0.73.tar.gz  && \
   rm -rf /var/lib/apt/lists/* && \
-  tar xvf apache-tomcat-7.0.73.tar.gz -C /opt/tomcat --strip-components=1 && \
-  JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
+  tar xvf apache-tomcat-7.0.73.tar.gz -C /opt/tomcat --strip-components=1
+  
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
   
 
 EXPOSE 8080
